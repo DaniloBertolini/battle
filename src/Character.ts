@@ -82,7 +82,7 @@ export default class Character implements Fighter {
     }
   }
 
-  attack(enemy: SimpleFighter): void {
+  attack(enemy: Fighter | SimpleFighter): void {
     enemy.receiveDamage(this.strength);
   }
 
