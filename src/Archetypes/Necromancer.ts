@@ -5,8 +5,8 @@ export default class Necromancer extends Archetypes {
   private _ability: EnergyType = 'mana';
   static counter = 0;
 
-  constructor(name: string) {
-    super(name);
+  constructor() {
+    super('Necromancer');
     Necromancer.counter += 1;
   }
 

@@ -5,8 +5,8 @@ export default class Warrior extends Archetypes {
   private _ability: EnergyType = 'stamina';
   static counter = 0;
 
-  constructor(name: string) {
-    super(name);
+  constructor() {
+    super('Warrior');
     Warrior.counter += 1;
   }
 

@@ -1,11 +1,12 @@
+import getRandomInt from '../utils';
 import Race from './Race';
 
 export default class Dwarf extends Race {
   private _maxLifePoints = 80;
   static raceCounter = 0;
 
-  constructor(name: string, dexterity: number) {
-    super(name, dexterity);
+  constructor() {
+    super('Dwarf', getRandomInt(1, 10));
     Dwarf.raceCounter += 1;
   }
 

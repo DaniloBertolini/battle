@@ -5,8 +5,8 @@ export default class Ranger extends Archetypes {
   private _ability: EnergyType = 'stamina';
   static counter = 0;
 
-  constructor(name: string) {
-    super(name);
+  constructor() {
+    super('Ranger');
     Ranger.counter += 1;
   }
 

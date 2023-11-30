@@ -5,8 +5,8 @@ export default class Mage extends Archetypes {
   private _ability: EnergyType = 'mana';
   static counter = 0;
 
-  constructor(name: string) {
-    super(name);
+  constructor() {
+    super('Mage');
     Mage.counter += 1;
   }
 
