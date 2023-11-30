@@ -18,11 +18,11 @@ export default class PVP extends Battle {
   }
 
   private isWinner() {
-    if (this._character.lifePoints < 1) {
+    if (this._character.lifePoints === -1) {
       return { winner: -1 };
     }
 
-    if (this._enemy.lifePoints < 1) {
+    if (this._enemy.lifePoints === -1) {
       return { winner: 1 };
     }
 
