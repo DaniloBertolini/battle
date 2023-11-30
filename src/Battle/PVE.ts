@@ -13,7 +13,7 @@ export default class PVE extends Battle {
   }
 
   override fight(): number {
-    this._character.attack(this.monsterPosition(this._index));
+    this._character.attack(this._enemy[this._index]);
     this._enemy[this._index].attack(this._character);
 
     // this._enemy.reduce(
@@ -26,6 +26,8 @@ export default class PVE extends Battle {
     //   },      
     //   [],
     // );
+
+    this.monsterAlive();
 
     const winner = this.isWinner();
     if (winner) {
@@ -47,7 +49,9 @@ export default class PVE extends Battle {
     return null;
   }
 
-  private monsterPosition(position: number) {
-    return this._enemy[position];
+  private monsterAlive() {
+    if (this._enemy[this._index].lifePoints === -1) {
+      this._index += 1;
+    }
   }
 }
